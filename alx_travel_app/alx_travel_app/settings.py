@@ -13,7 +13,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import environ
 import os
-from pathlib import Path
+
+CHAPA_SECRET_KEY = os.getenv("CHAPA_SECRET_KEY")
+CHAPA_PUBLIC_KEY = os.getenv("CHAPA_PUBLIC_KEY")
+CHAPA_BASE_URL = "https://api.chapa.co/v1"
 
 env = environ.Env()
 environ.Env.read_env()
